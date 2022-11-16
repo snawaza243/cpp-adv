@@ -1,22 +1,19 @@
 #include <iostream>
-#include <stdlib.h>
-
+using namespace std;
+/**
+ * References: A references is the nick name given to an existing variable or alias given to a variable.
+ * Need of references: for parameter passing, in C++ for writing small function instead of use pointer
+ * Note I: references does not consume memory but ses the same memory of its main variable
+ * Note II: Reference is not a pointer
+ * 
+*/
 int main()
 {
-    int *p;
-    p = new int[5];
+    int a = 7;
+    int &r = a; // here r is reference an another name of a;
 
-    p[0] = 1;
-    p[1] = 6;
-    p[2] = 3;
-    p[3] = 9;
-    p[4] = 1;
-
-    for (int i = 0; i < 5; i++)
-    {
-        // cout << p[i] << endl;
-    }
-
-    // delete [ ] p;
-    // free(p)
+    printf("a = %d", a);
+    printf("\nr = %d\n", r);
+    cout << sizeof(a) << endl;
+    cout << sizeof(r);
 }
