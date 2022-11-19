@@ -33,8 +33,6 @@ using namespace std;
 */
 
 
-
-
 void fun1(int A[], int n)
 {
     for (int i = 0; i < n; i++)
