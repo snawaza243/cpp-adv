@@ -1,0 +1,172 @@
+Data structure:
+arrangement of collection of data items so that they can be utilized efficiently, and operation can be done efficiently inside the main memory during execution the program.
+During the execution of program how the program will manage data inside the main memory and operation.
+
+data structure is a running program forms in main memory.
+ex: array, linked list, tree, hash table etc.
+
+main component
+
+1. Ram : 
+A primary, temporary or working memory.
+2. CPU : execute the instruction or program
+3. HSS/SDD : permanent storage where programs be install
+
+
+database: 
+large size data  arrangement on disk
+arranging the data in some model like rdmbs, dbms etc. in the permanent storage so that it can be retrieve or to accessed by application easily.
+
+dataware house: 
+huge data amount that store and arrangement in the form of  array of disk. 
+it is like commercial data that can be -
+operational data - daily use data
+legacy data - kept as storage some were, if required we fetch and execute.
+
+kept large size data acting as historical data for any commercial form and that is known as dataware house that help on decision making.
+
+big data:
+storing and utilizing very large size of data that study is big data, used in internal 
+
+
+comparison of different data name
+
+data structure: inside main memory during execution of program arrangement of data in main memory in data structure.
+database: large size of dta arrangement of dta on disk in database.
+dataware house: huge size of data that is be in inactive mode, utilized on required, arrangement of data in array of disk.
+big data: storing utilizing very large size data 
+
+
+
+4.2
+static vs dynamic memory allocation
+
+memory divided into addressable unit into bytes. every block have address having linear single value having own address.
+0-65535=65536=64*10^24=64kb
+
+entire main memory not used as single unit but it is divided into manageable pieces that is known as segment.
+
+How a program use main memory
+main memory divided into three different parts
+1. code section: 
+where program resides and its size is not fixed fluctuate as program size required to execute.
+2. heap:
+piling up, if the things are kept one another or just randomly. heap is used in two case-
+a. if things are properly organized like tower
+b. if not but looking like a tower
+heap word can eb used for organized or unorganized things
+in main memory heap is used as unorganized memory but stack is organized
+program can access inside code section but can not access directly to the heap memory but can access by using using pointer only and over the policy.
+
+3. stack
+it keeps activation record also called stack frame of main function
+as the stack property is keeps create variable functions one upon one and destroy after termination of program.
+
+
+working and uses of memory
+
+once the compile the code/ or runt any program the compiled code comes into code section.
+processor start execution
+then main function, other functions or variable create(into stack or heap as per defined into program).
+once the program end all the function, variable keep destroy (need to free space in heap by define in program)
+
+
+types of data structure
+1. physical data structure - array, liked list etc.
+2. logical data structure - tree, graph, hash etc.
+
+physical dta structure:
+it decide and define how the memory organized allocation. 
+ex array, liked list
+
+array:
+collection of contiguous memory location and locate side by side. all elements are together at one place, with fix size means static and size of array can not be increase after create with size.
+array can be created inside stack or heap.
+use: when know max no of elements to store.
+
+linked list:
+collection of node and each nodes contain data and link number of next node.
+it is dynamic data structure
+its list can grow and reduce dynamically so it is having variable length.
+linked list can be created in only heap.
+head may be in stack that can be pointer.
+use: when size of list is unknown
+
+the physical data structure define how memory should be organized for storing the elements of data and they are more related memory.
+
+
+physical data structure means for storing data in the memory and on that we need to perform some operation like insertion, deletion, deletion, update, etc. then how its all will be done with following ---
+a particular discipline that defined by that logical data structure.
+
+the logical data structures are actual used in application used in algorithm, and to implementing these data structure we use array or liked list.
+
+finally logical data structures are implemented using physical data structure.
+
+
+ADT - Abstract Data types
+
+Data type:
+it is having two things-
+how to represent the data
+operation on data
+
+int x; //in c or c++
+if is take 2byte
+then it create 16 bites
+
+representation in side in memory
+1st bit for sign that can be + or -
+and rest over for number
+
+operation can be arithmetic operations 
+like +, -, *, /, % also ++, -- pre and post
+
+Abstract:
+hiding internal details
+lwt we are not going to know internal binary operation but only data representation and operation. so the internal details are abstract for us.
+the abode example of primitive data type
+
+Abstract data type:
+it is related to OOP language
+using class we can define our own data type that are abstract data type without knowing internal details as can use them
+
+ex list defined as ADT
+collection of elements or list
+ representation of data
+ data 
+ 1. space for storing elements
+ 2. capacity
+ 3. size of list no of elements
+operation to perform on list
+
+add(x)
+remove()
+search(key)
+
+
+ADT
+define the data and operation on data together and let is be used as data type by hiding all the internal details.
+a class having representation of data nd operation
+
+operations on list
+add(element)
+add(index, element)
+remove(index)
+set(index, element)
+get(index)
+search(key)
+sort()
+reverse
+combine
+merge
+split
+
+
+time and complexity
+
+computer are used for performing computation task. so computation also need time.
+it depends on process or procedure for compiling that task..
+time complexity depends on the procedure that are adopting.
+
+
+

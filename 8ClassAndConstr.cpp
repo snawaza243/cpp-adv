@@ -4,21 +4,23 @@ using namespace std;
 class Rectangle
 {
 private:
-// data member
+    // data member
     int length;
     int breath;
 
 public:
-// member function/ Non-argument constructor
-    Rectangle()
+    // member function
+    Rectangle() // Non-argument constructor / Default constructor
     {
-        int length;
-        int breath;
+        int length = breath = 1;
     }
-    Rectangle(int l, int b);
+    Rectangle(int l, int b); // overloaded or parametric constructor
+
+    // facilitator pr perfaction or data member object
     int area();
     int perimeter();
-    int getLength()
+
+    int getLength() // Axessor
     {
         return length;
     };
@@ -27,7 +29,8 @@ public:
     {
         return breath;
     }
-    void setLength(int l)
+
+    void setLength(int l) // mutator
     {
         length = l;
     }
@@ -35,6 +38,9 @@ public:
     {
         breath = b;
     }
+
+    //deallocator useful on heap memory
+    // ~Rectangle()4;
 };
 
 // implementation
@@ -52,17 +58,17 @@ int Rectangle::perimeter()
     return 2 * (length * breath);
 }
 
-// Rectangle:: ~ Rectangle()
+// Rectangle::~Rectangle()
 // {
 //     cout << "This is destructor";
 // }
 int main()
 {
     Rectangle r(10, 15);
-    cout << r.area() << endl;
-    cout << r.perimeter() << endl;
+    cout << "Area = " << r.area() << endl;
+    cout << "Perimeter = " << r.perimeter() << endl;
     r.setBreath(16);
     r.setLength(11);
-    cout << r.getLength() << endl;
-    cout << r.getBreath() << endl;
+    cout << "New Length = " << r.getLength() << endl;
+    cout << "New Breath = " << r.getBreath() << endl;
 }
