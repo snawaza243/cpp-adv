@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--######### Writing Callback Function #############-->
+    <script type="text/javascript">
+        //----------------------------Defaults
+        var ListBlogLink = window.location.hostname;
+        var ListCount = 5;
+        var TitleCount = 70;
+        var ListLabel = " ";
+        //----------------------------Function Start
+        function mbtlist(json) {
+            document.write('<ul class="mbtlist">');
+            for (var i = 0; i < ListCount; i++) {
+
+                //-----------------------------Variables Declared
+                var listing = ListUrl = ListTitle = "";
+                //----------------------------- Title URL
+                for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                    if (json.feed.entry[i].link[j].rel == 'alternate') {
+                        break;
+                    }
+                }
+                ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+                //----------------------------------- Title Stirng
+                if (json.feed.entry[i].title != null) {
+                    ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+                }
+                //----------------------------------- Printing List
+                var listing = "<li><a class='mbttitle' href=" +
+                    ListUrl +
+                    "target='_blank'>" +[i+1]+". "+
+                    ListTitle +
+                    "</a></li>";
+                document.write(listing);
+            }
+            document.write("</ul>");
+        }
+    </script>
+    <!--######### Invoking the Callback Function #############-->
+    <script>
+        ListBlogLink = "https://www.indiantechnoera.in";
+        ListCount = 999;
+        TitleCount = 999;
+  ListLabel =  "JavaScript" || "Java Script" || "javascript";
+        document.write("<script src='" + ListBlogLink + "/feeds/posts/default/-/" + ListLabel +
+            "?alt=json-in-script&callback=mbtlist'></" + "script>");
+    </script>
+    <!--######### Styles for Look #############-->
+
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css"></link>
+    <style>
+        .mbtlist {
+            list-style-type: none;
+            overflow: hidden
+        }
+
+        .mbtlist li {
+            list-style: none;
+            border: 2px solid rgb(0, 0, 0);
+            margin: 15px;
+            padding: 15px;
+            margin-right: 30px;
+            margin-left: 0px;
+            border-radius: 45px;
+            font-size: 20px;
+            line-height: 1;
+            transition: 0.4s;
+            
+        }
+
+        .mbtlist li:hover {
+            padding-left: 25px;
+            transition: 0.3s;
+            color: white;
+            background-color: #f33611;
+
+        }
+
+        .mbtlist .mbttitle {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: px;
+            color: #000000;
+            font-weight: normal;
+            text-decoration: none;line-height: 2;
+        }
+
+        .mbtlist .mbttitle:hover {
+            font-size: px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight:none;
+            transition: 0.2s;
+
+        }
+
+       
+    </style>
+
+
+</body>
+</html>

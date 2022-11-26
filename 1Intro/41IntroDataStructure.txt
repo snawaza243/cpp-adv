@@ -170,3 +170,57 @@ time complexity depends on the procedure that are adopting.
 
 
 
+case I;
+depends of number of element
+for(i=0;i<n;i++)    --> o(n)
+
+
+case II;
+depends of number of element
+for(i=0;i<n;i++)    --> o(n)
+{ for(j=0;j<n;j++)    --> o(n)
+
+total time complexity = o(n^2)
+
+case III:
+process rest of element beginning at 1st element
+process rest of element beginning at 2nd element
+process rest of element beginning at 3rd element
+-
+-
+-
+
+n(n-1)/2
+
+degree of polymorphism o(n^2)
+
+
+case IV:
+when something successively divided until it reaches one that represented as log 
+like log2(n)
+for(i=n;i>1;i/2)
+
+when for loop is not increasing one by one every time then prefer to use while loop
+and for loop is used for counter which are incrementing by one.
+ex: binary tree (spending time upon a tree along height of tree)
+
+if process all elements on the writing program
+--> o(n)
+
+case V:
+linked list
+
+if in the form of matrix
+if processing only row --> o(n)
+if processing only column --> o(n)
+if row and column both --> o(n^2)
+
+case VI:
+array linked list
+
+considering array also --> o(m+n)
+not considering array  --> o(n)
+
+
+
+i

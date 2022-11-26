@@ -71,7 +71,7 @@ int main()
 
     c2[0].face;   // 1
     c2[0].shape;  // 1
-    c2.[0].color; // 0
+    c2[0].color; // 0
 
     return 0;
 }
