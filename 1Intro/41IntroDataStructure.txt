@@ -223,4 +223,101 @@ not considering array  --> o(n)
 
 
 
-i
+Recursion
+==========
+a function call itself called as Recursion and inside recurve function must be some condition which will make recursion to stop and terminate.
+
+Recursion function format:
+type functionName(parameter)
+{
+    if(<baseCondition)
+    {
+        functionName(parameter)
+    }
+}
+
+
+example:
+void function1(int a)
+{
+    if(n>0)
+    {
+        cout<<a<<endl;
+        function1(n-1);
+    }
+}
+
+
+
+example with calling and returning phase
+void function1(int a)
+{
+    if(n>0)
+    {
+        //calling phase : Ascending
+        cout<<a<<endl;
+        function1(n-1);
+
+        //returning phase: Descending
+        function1(n-1);
+        cout<<a<<endl;
+    }
+}
+
+
+generalizing the recursion
+============================
+there are tow different recursion phase 
+-->Ascending as the calling phase
+-->Descending as the returning phase
+but as comparatively for loop have only Ascending phase
+
+
+
+Recursion use stack memory of primary memory
+==============================================
+calling or Ascending phase called n+1 time in stack 
+
+Recursion recurrence form
+
+void function2(int n)
+{
+    if(n>0)             --> 1
+    {
+        cout<<n;        --> 1
+        function2(n-1); --> T(n-1)
+    }
+}
+
+total T(n) = T(n-1)+2
+
+recurrence form
+
+
+         ____
+        | 1           n=0
+T(n)    |
+        | T(n-1)+2    n>0
+        | T(n-1)+1    n constant
+        |____
+
+T(n) = T(n-1) + 1
+T(n) = T(n-2) + 2
+T(n) = T(n-3) + 3
+        |
+        |
+        |
+T(n) = T(n-k) + k
+
+if n-k = 0
+T(n) = T(0) + n
+T(n) = 1 + n
+     = o(n)
+where n= number of calls
+
+
+Static variable in Recursion
+===============================
+
+
+
