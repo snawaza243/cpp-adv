@@ -1,0 +1,89 @@
+React a JavaScript library created by Facebook
+Use to build single page user interface
+It allows to create reusable UI component
+frontend JavaScript framework
+
+
+example of creating a Hello world component
+
+import React from 'react'
+import ReactDOM from 'react-dom/clint'
+
+function Hello(props){
+    return (
+        <>
+            <h1> Hello World </h1>
+        </>
+    )
+}
+export default Hello; 
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <>
+        <Hello/>;
+
+    </>
+)
+
+or
+ReactDOM.render(Hello, document.getElementById('root'))
+
+
+
+Better to know already
+HTML
+CSS
+JavaScript
+and ECMA6 of JavaScript that have huge new feature that enhance React more.
+
+
+start and setup 
+
+download and install node that comes with npm
+
+then lets start creating react application
+there are different commands as following
+
+first method as executable level
+npx create-react-app myApp
+
+npx = node package execute comes with npm 5.2.0+ version
+it is an npm package runner that can execute any package that you want from the npm registry without even installing that package
+
+create-react-app = that setup app required tools like webpack, babel, and ESLint
+
+second method at global level that is no longer support for now
+npm install -g create-react-app myApp
+
+
+Note: if you have installed create-react-app globally the uninstall because npx use alway latest version of create-react-app. To uninstall follow the commands
+npm uninstall -g create-react-app
+
+
+Now lest run created react app
+cd myApp
+npm start or yarn start
+
+
+What and how 
+
+a tool for building UI components
+
+how?
+
+react creates a virtual dom in memory instead of manipulating the browser's dom where it does all the necessary manipulating before making the making hte changes in the browser DOM.
+
+it only changes what need to be changed
+it find what changes have been made and change changes only what needs to be changed
+
+brief history
+created by Facebook software engineer jordan walke 
+current version of ReactJS V18.2.0
+initial release V0.3.3 in july 2013
+it was first use in 2011 for Facebook newsfeed feature
+current version of create-react-app V5.0.1
+
+
+current version of Node V19
+current version of chrome version JavaScript engine V8
